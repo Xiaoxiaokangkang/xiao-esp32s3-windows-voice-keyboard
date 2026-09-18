@@ -1,0 +1,42 @@
+# ESP-IDF build output and local configuration
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+
+# Python and test output
+__pycache__/
+*.py[cod]
+*.log
+*.wav
+*.csv
+.venv/
+venv/
+
+# Credentials, signing material, and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+credentials*
+secrets*
+private-config*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local packages and backups
+*.zip
+_backup*/
+_inspection*/
+

@@ -1,0 +1,44 @@
+XIAO ESP32S3 Voice Keyboard - validation record
+Date: 2026-09-17
+
+Validated wiring:
+- INMP441 SD -> D8 / GPIO7
+- INMP441 SCK -> D9 / GPIO8
+- INMP441 WS -> D10 / GPIO9
+- K1/B1 -> D2 / GPIO3, active-high with internal pull-down
+- K2/B2 -> D1 / GPIO2, active-high with internal pull-down, reserved / no action
+- K3/B3 -> D0 / GPIO1, active-high with internal pull-down, reserved / no action
+
+USB enumeration:
+- USB composite device VID 303A, PID 4010: Started
+- Voice Keyboard Audio / Microsoft USB Audio 2.0: Started
+- HID Keyboard Device: Started
+
+Live acoustic capture (8 seconds, 48 kHz, 16-bit mono):
+- samples: 384000
+- non-zero samples: 383686
+- minimum: -1740
+- maximum: 1793
+- RMS: 557.42
+- overflow: false
+- result: PASS, live acoustic signal detected
+
+Independent open/close/reopen test:
+- first: 96000 bytes, 47865 non-zero, RMS 1123.66
+- second: 96000 bytes, 47939 non-zero, RMS 1042.21
+- capture hashes differed
+- overflow: false in both sessions
+- result: PASS, second session contains fresh non-zero audio
+
+Windows capture configuration:
+- Default recording device: Microphone (Voice Keyboard Audio)
+- Default communications recording device: Microphone (Voice Keyboard Audio)
+- Muted: false
+- Volume: 100%
+
+K1 functional validation:
+- standard Boot Keyboard HID report without Report ID
+- press sequence: Left Ctrl, then Left Ctrl + Left Windows
+- release sequence: Left Ctrl, then all modifiers released
+- physical K1 high-level trigger confirmed working
+- result: PASS, WeChat Input Method voice input invoked
