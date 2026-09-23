@@ -1,6 +1,6 @@
 # 版本说明
 
-三个版本使用相同的 XIAO ESP32S3、INMP441 接线和 USB 麦克风实现，区别只在按键映射和 V3 的本地 Windows 助手。
+三个版本使用相同的 XIAO ESP32S3、INMP441 接线和 USB 麦克风实现，区别只在按键映射和 V3 的本地 Windows 助手。V1–V3 是与 macOS 仓库统一的课程功能编号，不表示操作系统或硬件批次。
 
 ## V1：K1 语音输入
 
@@ -31,4 +31,3 @@
 | V3 | `0x4012` | `XIAO Voice Keyboard V3 TraeWork` | `XIAO-S3-VOICE-03` |
 
 不同 PID 和序列号可避免 Windows 复用旧版 USB 描述符缓存。
-

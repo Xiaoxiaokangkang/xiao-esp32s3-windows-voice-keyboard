@@ -2,9 +2,11 @@
 
 这是一个基于 Seeed Studio XIAO ESP32S3、INMP441 麦克风和 3 个实体按键的 Windows USB 语音键盘项目。设备枚举为标准 USB HID 键盘和 48 kHz / 16-bit / 单声道 USB 麦克风。
 
-本仓库只包含经过整理的 Windows 版本。macOS 版本位于 [xiao-esp32s3-macos-voice-keyboard](https://github.com/Xiaoxiaokangkang/xiao-esp32s3-macos-voice-keyboard)。两个仓库使用相似的目录和版本说明，安装脚本与固件不混用。
+本仓库只包含经过整理的 Windows 版本。macOS 版本位于 [xiao-esp32s3-macos-voice-keyboard](https://github.com/Xiaoxiaokangkang/xiao-esp32s3-macos-voice-keyboard)。两个仓库使用统一的课程功能编号：V1 是 K1 语音输入，V2 是语音/发送/取消，V3 是 TraeWork CN；安装脚本与固件仍按操作系统分别提供，不能混用。
 
 ## 版本选择
+
+这里的 V1–V3 表示课程功能阶段，不表示操作系统或硬件批次。选择同一版本号时，Windows 和 macOS 的按键目标一致，但底层快捷键、桥接程序和固件文件不同。
 
 | 顺序 | 版本 | 3 个实体按键的功能 | 当前状态 |
 |---:|---|---|---|
